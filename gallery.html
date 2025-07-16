@@ -19,8 +19,13 @@
       padding: 2rem;
       text-align: center;
     }
+    header img {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
     h1 {
-      margin: 0;
+      margin: 0.5rem 0;
     }
     .gallery {
       display: flex;
@@ -29,8 +34,9 @@
       padding: 2rem;
     }
     .gallery img {
-      max-width: 250px;
-      width: 100%;
+      width: 384px;
+      height: 576px;
+      object-fit: cover;
       margin: 10px;
       border-radius: 8px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -46,6 +52,7 @@
 <body>
 
 <header>
+  <img src="assets/logo-earl-naswell.png" alt="Earl Naswell Logo">
   <h1>Earl Naswell Gallery</h1>
   <p>Photos from past Christmas Dinners and volunteers in action</p>
 </header>
