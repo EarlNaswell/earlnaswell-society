@@ -1,68 +1,70 @@
-
+<!-- Earl Naswell Christmas Society Website (index_v1 design) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Earl Naswell Christmas Society</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #fff;
+      background-color: #ffffff;
       color: #333;
     }
     header {
       background-color: #bf360c;
       color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 2rem 1rem;
     }
     header img {
       max-width: 200px;
     }
-    h1 {
-      margin: 0.5rem 0 0;
+    h1, h2, h3 {
+      text-align: center;
     }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       padding: 2rem;
     }
-    .center {
-      text-align: center;
+    .donation-box, .volunteer {
+      margin-top: 2rem;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 2rem;
     }
     .gallery img {
-      width: 300px;
-      margin: 10px;
+      width: 200px;
+      height: auto;
     }
     footer {
       text-align: center;
       padding: 2rem;
       background-color: #f5f5f5;
+      margin-top: 3rem;
       color: #555;
-    }
-    .donation-box, .volunteer {
-      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="assets/logo-earl-naswell.png" alt="Earl Naswell Logo" />
+  <img src="assets/logo-earl-naswell.png" alt="Earl Naswell Logo">
   <h2>A Place for Everyone at the Table</h2>
 </header>
 
 <main>
-  <section class="center">
-    <h3>About Earl Naswell</h3>
-    <p><strong>January 21, 1931 – October 6, 2020</strong></p>
-  </section>
+  <h3>About Earl Naswell</h3>
+  <p style="text-align:center;"><strong>January 21, 1931 – October 6, 2020</strong></p>
   <p>Earl Naswell was born in Minnedosa, Manitoba, to John and Mary Naswell. A devoted father of seven children, grandfather of fourteen, and great-grandfather of thirteen, Earl was a kind and hardworking man who made an extraordinary impact on the Comox Valley community.</p>
   <p>In 1982, Earl began what would become one of Vancouver Island’s most cherished traditions: the Earl Naswell Community Christmas Dinner. What started as a simple act of kindness for a few friends grew into a community-wide event that now serves over 500 people annually. Earl’s passion and humility inspired countless volunteers and donors to come together every Christmas Day to ensure no one went without a hot meal or holiday companionship.</p>
-  <img src="assets/earl-naswell-christmas.jpg" alt="Earl Naswell at Christmas" style="width:100%; max-width:600px;"/>
+  <img src="assets/earl-naswell-photo.jpg" alt="Earl Naswell at Christmas" style="width:100%; max-width:600px; display:block; margin:20px auto;">
 
   <div class="donation-box">
     <h3>Make a Donation</h3>
@@ -74,20 +76,20 @@
 
   <div class="volunteer">
     <h3>Volunteer With Us</h3>
-    <p>Join over 100 dedicated volunteers. Whether in the kitchen, delivering meals,<br>or just setting up tables – we’d love your help. <br>
+    <p>Join over 100 dedicated volunteers. Whether in the kitchen, delivering meals, or just setting up tables – we’d love your help.<br>
     <strong>earlnaswellchristmassociety@gmail.com</strong></p>
   </div>
 
   <section class="gallery">
     <h3>📸 Earl Naswell Gallery</h3>
-    <img src="assets/photo1.jpg" alt="Gallery Image 1" />
-    <img src="assets/photo2.jpg" alt="Gallery Image 2" />
-    <img src="assets/photo3.jpg" alt="Gallery Image 3" />
-    <img src="assets/photo4.jpg" alt="Gallery Image 4" />
-    <img src="assets/photo5.jpg" alt="Gallery Image 5" />
-    <img src="assets/photo6.jpg" alt="Gallery Image 6" />
-    <img src="assets/photo7.jpg" alt="Gallery Image 7" />
-    <img src="assets/photo9.jpg" alt="Gallery Image 8" />
+    <img src="main/photo1.jpg" alt="Gallery Image 1">
+    <img src="main/photo2.jpg" alt="Gallery Image 2">
+    <img src="main/photo3.jpg" alt="Gallery Image 3">
+    <img src="main/photo4.jpg" alt="Gallery Image 4">
+    <img src="main/photo5.jpg" alt="Gallery Image 5">
+    <img src="main/photo6.jpg" alt="Gallery Image 6">
+    <img src="main/photo7.jpg" alt="Gallery Image 7">
+    <img src="main/photo8.jpg" alt="Gallery Image 8">
   </section>
 </main>
 
