@@ -1,101 +1,38 @@
-<!-- Earl Naswell Christmas Society Website (index_v1 design) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Earl Naswell Christmas Society</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #ffffff;
-      color: #333;
-    }
-    header {
-      background-color: #bf360c;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header img {
-      max-width: 200px;
-    }
-    h1, h2, h3 {
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-    .donation-box, .volunteer {
-      margin-top: 2rem;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 2rem;
-    }
-    .gallery img {
-      width: 200px;
-      height: auto;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #f5f5f5;
-      margin-top: 3rem;
-      color: #555;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="header">
+    <img src="logo-earl-naswell.png" alt="Earl Naswell Christmas Society Logo" class="logo"/>
+    <h1>A Place for Everyone at the Table</h1>
+  </header>
 
-<header>
-  <img src="assets/logo-earl-naswell.png" alt="Earl Naswell Logo">
-  <h2>A Place for Everyone at the Table</h2>
-</header>
+  <main class="main-content">
+    <section class="about">
+      <h2>About Earl Naswell</h2>
+      <p><strong>January 21, 1931 – October 6, 2020</strong></p>
+      <p>
+        Earl Naswell was born in Minnedosa, Manitoba, to John and Mary Naswell. A devoted father of seven children,
+        grandfather of fourteen, and great-grandfather of thirteen, Earl was a kind and hardworking man who made an
+        extraordinary impact on the Comox Valley community.
+      </p>
+      <p>
+        In 1982, Earl began what would become one of Vancouver Island’s most cherished traditions: the Earl Naswell
+        Community Christmas Dinner. What started as a simple act of kindness for a few friends grew into a
+        community-wide event that now serves over 500 people annually. Earl’s passion and humility inspired countless
+        volunteers and donors to come together every Christmas Day to ensure no one went without a hot meal or holiday
+        companionship.
+      </p>
+    </section>
 
-<main>
-  <h3>About Earl Naswell</h3>
-  <p style="text-align:center;"><strong>January 21, 1931 – October 6, 2020</strong></p>
-  <p>Earl Naswell was born in Minnedosa, Manitoba, to John and Mary Naswell. A devoted father of seven children, grandfather of fourteen, and great-grandfather of thirteen, Earl was a kind and hardworking man who made an extraordinary impact on the Comox Valley community.</p>
-  <p>In 1982, Earl began what would become one of Vancouver Island’s most cherished traditions: the Earl Naswell Community Christmas Dinner. What started as a simple act of kindness for a few friends grew into a community-wide event that now serves over 500 people annually. Earl’s passion and humility inspired countless volunteers and donors to come together every Christmas Day to ensure no one went without a hot meal or holiday companionship.</p>
-  <img src="assets/earl-naswell-photo.jpg" alt="Earl Naswell at Christmas" style="width:100%; max-width:600px; display:block; margin:20px auto;">
-
-  <div class="donation-box">
-    <h3>Make a Donation</h3>
-    <p>Your support keeps Earl’s vision alive. Every dollar goes directly to food, supplies, and logistics.</p>
-    <p>Donate via Interac e-Transfer to: <strong>earlnaswellchristmassociety@gmail.com</strong></p>
-    <p>Funds are auto-deposited to Coastal Community Credit Union.</p>
-    <p><a href="https://www.canadahelps.org/en/charities/earl-naswell-community-christmas-society/" target="_blank">Donate on CanadaHelps</a></p>
-  </div>
-
-  <div class="volunteer">
-    <h3>Volunteer With Us</h3>
-    <p>Join over 100 dedicated volunteers. Whether in the kitchen, delivering meals, or just setting up tables – we’d love your help.<br>
-    <strong>earlnaswellchristmassociety@gmail.com</strong></p>
-  </div>
-
-  <section class="gallery">
-    <h3>📸 Earl Naswell Gallery</h3>
-    <img src="main/photo1.jpg" alt="Gallery Image 1">
-    <img src="main/photo2.jpg" alt="Gallery Image 2">
-    <img src="main/photo3.jpg" alt="Gallery Image 3">
-    <img src="main/photo4.jpg" alt="Gallery Image 4">
-    <img src="main/photo5.jpg" alt="Gallery Image 5">
-    <img src="main/photo6.jpg" alt="Gallery Image 6">
-    <img src="main/photo7.jpg" alt="Gallery Image 7">
-    <img src="main/photo8.jpg" alt="Gallery Image 8">
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 Earl Naswell Christmas Society | Registered Canadian Charity</p>
-</footer>
-
+    <section class="gallery-button-section">
+      <a href="gallery.html" class="gallery-button">View Gallery</a>
+    </section>
+  </main>
 </body>
 </html>
