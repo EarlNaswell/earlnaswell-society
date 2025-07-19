@@ -2,10 +2,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Lightbox CSS & JS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - Earl Naswell Christmas Society</title>
   <style>
+  .logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto 20px;
+}
+gallery img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;  /* Makes sure images aren't cropped */
+  margin-bottom: 10px;
+} 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -59,6 +73,9 @@
 
 <div class="gallery">
   <img src="assets/image1.jpg" alt="Gallery Image 1">
+  <a href="assets/image001.jpg" data-lightbox="gallery">
+  <img src="assets/image001.jpg" alt="Event Photo">
+</a>
   <img src="assets/image2.jpg" alt="Gallery Image 2">
   <img src="assets/image3.jpg" alt="Gallery Image 3">
   <img src="assets/image4.jpg" alt="Gallery Image 4">
