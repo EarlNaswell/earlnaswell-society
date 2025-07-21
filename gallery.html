@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,164 +6,149 @@
   <title>Earl Naswell Gallery</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f3f3f3;
-      color: #000;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
     }
-
-    header {
-      background-color: #b60000;
+    .header {
+      background-color: #8B0000;
       color: white;
-      padding: 1rem 0;
-      text-align: center;
+      padding: 30px 20px 10px 20px;
     }
-
     .logo {
-    width: 200px; /* Adjust size as needed */
-    display: block;
-    margin: 0 auto 20px auto;
-   }
-    main {
-      flex: 1;
-      text-align: center;
-      padding: 1rem;
+      width: 150px;
+      margin: 10px auto;
     }
-
-    h1 {
-      margin-top: 0.5rem;
-      font-size: 2rem;
+    .subtitle {
+      font-style: italic;
+      margin-top: 10px;
     }
-
-    .gallery {
+    .gallery-container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
-      padding: 1rem;
     }
-
-    .gallery img {
-      width: 240px;
+    .gallery-container img {
+      width: 250px;
       height: 180px;
       object-fit: cover;
+      margin: 10px;
       border-radius: 10px;
       cursor: pointer;
-      transition: transform 0.3s;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
     }
-
-    .gallery img:hover {
+    .gallery-container img:hover {
       transform: scale(1.05);
     }
-
-    footer {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    /* Lightbox styles */
     .lightbox {
       display: none;
       position: fixed;
-      z-index: 1000;
-      left: 0;
+      z-index: 10;
       top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0,0,0,0.9);
+      background-color: rgba(0, 0, 0, 0.9);
       justify-content: center;
       align-items: center;
     }
-
     .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 10px;
     }
-
-    .lightbox-arrow {
+    .lightbox .arrow, .lightbox .close {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 3rem;
+      font-size: 3em;
       color: white;
       cursor: pointer;
       user-select: none;
     }
-
-    .arrow-left { left: 40px; }
-    .arrow-right { right: 40px; }
+    .lightbox .arrow.left {
+      left: 20px;
+    }
+    .lightbox .arrow.right {
+      right: 20px;
+    }
+    .lightbox .close {
+      top: 30px;
+      right: 30px;
+      transform: none;
+      font-size: 2em;
+    }
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3L6GT8WWN6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-3L6GT8WWN6');
+  </script>
 </head>
 <body>
-  <header>
-    <img src="assets/logo-new.png" alt="Earl Naswell Logo" class="logo">
-  </header>
-
-  <main>
+  <div class="header">
     <h1>Earl Naswell Gallery</h1>
-    <p>Photos from past Christmas Dinners</p>
-    <div class="gallery" id="gallery">
-      <img src="assets/image1.jpg" alt="Christmas photo 1">
-      <img src="assets/image2.jpg" alt="Christmas photo 2">
-      <img src="assets/image3.jpg" alt="Christmas photo 3">
-      <img src="assets/image4.jpg" alt="Christmas photo 4">
-      <img src="assets/image5.jpg" alt="Christmas photo 5">
-      <img src="assets/image6.jpg" alt="Christmas photo 6">
-      <img src="assets/image7.jpg" alt="Christmas photo 7">
-      <img src="assets/image8.jpg" alt="Christmas photo 8">
-      <img src="assets/image9.jpg" alt="Christmas photo 9">
-      <img src="assets/image10.jpg" alt="Christmas photo 10">
-    </div>
-  </main>
-
-  <div class="lightbox" id="lightbox">
-    <span class="lightbox-arrow arrow-left" id="prev">&#10094;</span>
-    <img src="" alt="Expanded view" id="lightbox-img">
-    <span class="lightbox-arrow arrow-right" id="next">&#10095;</span>
+    <img src="assets/logo-new.png" alt="Logo" class="logo" />
+    <div class="subtitle">Photos from past Christmas Dinners</div>
   </div>
-
-  <footer>
-    Non-Registered Non-Profit Canadian Charity
-  </footer>
-
+  <div class="gallery-container">
+    <!-- Images from image1.jpg to image10.jpg -->
+    <img src="assets/image1.jpg" alt="Gallery Image 1" onclick="openLightbox(0)" />
+    <img src="assets/image2.jpg" alt="Gallery Image 2" onclick="openLightbox(1)" />
+    <img src="assets/image3.jpg" alt="Gallery Image 3" onclick="openLightbox(2)" />
+    <img src="assets/image4.jpg" alt="Gallery Image 4" onclick="openLightbox(3)" />
+    <img src="assets/image5.jpg" alt="Gallery Image 5" onclick="openLightbox(4)" />
+    <img src="assets/image6.jpg" alt="Gallery Image 6" onclick="openLightbox(5)" />
+    <img src="assets/image7.jpg" alt="Gallery Image 7" onclick="openLightbox(6)" />
+    <img src="assets/image8.jpg" alt="Gallery Image 8" onclick="openLightbox(7)" />
+    <img src="assets/image9.jpg" alt="Gallery Image 9" onclick="openLightbox(8)" />
+    <img src="assets/image10.jpg" alt="Gallery Image 10" onclick="openLightbox(9)" />
+  </div>
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <span class="arrow left" onclick="prevImage()">‹</span>
+    <img id="lightbox-img" src="" alt="Large View" />
+    <span class="arrow right" onclick="nextImage()">›</span>
+  </div>
   <script>
-    const images = [...document.querySelectorAll('.gallery img')];
+    const images = [...document.querySelectorAll('.gallery-container img')];
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const nextBtn = document.getElementById('next');
-    const prevBtn = document.getElementById('prev');
     let currentIndex = 0;
 
-    function showImage(index) {
-      if (index >= 0 && index < images.length) {
-        lightboxImg.src = images[index].src;
-        currentIndex = index;
-        lightbox.style.display = 'flex';
-      }
+    function openLightbox(index) {
+      currentIndex = index;
+      lightboxImg.src = images[index].src;
+      lightbox.style.display = 'flex';
     }
 
-    images.forEach((img, i) => {
-      img.addEventListener('dblclick', () => showImage(i));
-    });
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
 
-    nextBtn.addEventListener('click', () => {
-      showImage((currentIndex + 1) % images.length);
-    });
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      lightboxImg.src = images[currentIndex].src;
+    }
 
-    prevBtn.addEventListener('click', () => {
-      showImage((currentIndex - 1 + images.length) % images.length);
-    });
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      lightboxImg.src = images[currentIndex].src;
+    }
 
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-      }
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
     });
   </script>
 </body>
