@@ -1,131 +1,91 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Earl Naswell Christmas Society</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3L6GT8WWN6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-3L6GT8WWN6');
   </script>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
       margin: 0;
       padding: 0;
       text-align: center;
-      color: #333;
     }
     header {
-      background-color: #a60000;
-      color: white;
-      padding: 1rem 0;
+      padding: 20px;
     }
     .logo {
       width: 150px;
-      margin-top: 1rem;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0;
-    }
-    h2 {
-      margin-top: 0.2rem;
-      font-weight: normal;
-      font-size: 1.25rem;
-      color: #f9f9f9;
-    }
-    .main-image {
-      max-width: 90%;
+    .earl-photo {
+      width: 60%;
+      max-width: 600px;
       height: auto;
-      margin: 20px 0;
-      border-radius: 8px;
+      margin-top: 20px;
     }
     .listen-button {
-      background-color: #a60000;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #800000;
       color: white;
       border: none;
-      padding: 12px 24px;
-      font-size: 16px;
-      border-radius: 8px;
+      border-radius: 5px;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 40px;
     }
-    .listen-button:hover {
-      background-color: #8b0000;
-    }
-    section {
+    .content {
       max-width: 800px;
-      margin: 0 auto 2rem;
-      padding: 0 20px;
+      margin: 20px auto;
       text-align: left;
     }
     footer {
-      background-color: #222;
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #333;
       color: white;
-      padding: 1rem 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    a.button-link {
-      display: inline-block;
-      background-color: #a60000;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin: 10px 5px;
-      font-weight: bold;
-    }
-    a.button-link:hover {
-      background-color: #8b0000;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Earl Naswell Christmas Society</h1>
-    <img src="assets/logo-new.png" alt="Earl Naswell Christmas Society Logo" class="logo" />
-    <h2>A Place for Everyone at the Table</h2>
+    <img src="assets/logo.png" alt="Earl Naswell Society Logo" class="logo" />
+    <h3>A Place at the Table for Everyone</h3>
   </header>
 
-  <img src="assets/earl-naswell-photo.jpg" alt="Earl Naswell with Santa" class="main-image" />
+  <img src="assets/earl-naswell-photo.jpg" alt="Earl Naswell and Santa" class="earl-photo" />
 
-  <button class="listen-button" onclick="readArticle()">
-    🔊 Listen to Article
-  </button>
+  <button class="listen-button" onclick="speakArticle()">🔊 Listen to Article</button>
 
-  <section id="bio">
+  <div class="content" id="biography">
     <p>
-      Earl Naswell was born in Minnedosa Manitoba to John and Mary Naswell. A devoted father of seven children, grandfather of fourteen, and great-grandfather of thirteen, Earl was a kind and hardworking man who made an extraordinary impact on the Comox Valley community. In 1982, Earl began what would become one of Vancouver Island’s most cherished traditions: the Earl Naswell Community Christmas Dinner. What started as a simple act of kindness for a few friends grew into a community-wide event that now serves over 1250 people annually.
+      Earl Naswell, a compassionate and devoted community member, started the Christmas dinner tradition in the Comox Valley over 35 years ago. His mission was simple yet profound: to ensure no one spends Christmas alone or hungry. From humble beginnings, Earl’s initiative grew to serve over <strong>1,250 meals</strong> each Christmas Day, fostering a spirit of inclusion and kindness.
     </p>
-  </section>
-
-  <section>
-    <a class="button-link" href="https://www.canadahelps.org/en/explore/charities/region/BC/city/comox/" target="_blank">Donate on CanadaHelps</a>
-    <a class="button-link" href="mailto:earlnaswellchristmassociety@gmail.com">Volunteer With Us</a>
-    <a class="button-link" href="gallery.html">View Photo Gallery</a>
-  </section>
+    <p>
+      Today, the Earl Naswell Christmas Society continues this legacy, powered by volunteers, donors, and the belief that everyone deserves a place at the table. Join us in keeping the spirit of giving alive.
+    </p>
+  </div>
 
   <footer>
-    <p>© 2025 Earl Naswell Christmas Society | Registered Non-Profit Canadian Charity</p>
+    Earl Naswell Christmas Society — Registered Non-Profit Canadian Charity
   </footer>
 
   <script>
-    function readArticle() {
-      const article = document.querySelector('#bio').innerText;
-      const utterance = new SpeechSynthesisUtterance(article);
-      window.speechSynthesis.cancel(); // Stop any current speech
-      window.speechSynthesis.speak(utterance);
+    function speakArticle() {
+      const textElement = document.getElementById("biography");
+      const text = textElement.textContent.replace(/\s+/g, " ");
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
     }
   </script>
 </body>
