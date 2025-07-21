@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Earl Naswell Christmas Society</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3L6GT8WWN6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,79 +13,119 @@
     gtag('config', 'G-3L6GT8WWN6');
   </script>
   <style>
-    .listen-button {
-      background-color: #720000;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    .listen-button:hover {
-      background-color: #5c0000;
-    }
-
-    .bio-photo {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      display: block;
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .bio-section {
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      padding: 20px;
+      color: #333;
+    }
+    header {
+      background-color: #a60000;
+      color: white;
+      padding: 1rem 0;
+    }
+    .logo {
+      width: 150px;
+      margin-top: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+    h2 {
+      margin-top: 0.2rem;
+      font-weight: normal;
+      font-size: 1.25rem;
+      color: #f9f9f9;
+    }
+    .main-image {
+      max-width: 90%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+    .listen-button {
+      background-color: #a60000;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .listen-button:hover {
+      background-color: #8b0000;
+    }
+    section {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      padding: 0 20px;
+      text-align: left;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 1rem 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    a.button-link {
+      display: inline-block;
+      background-color: #a60000;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 10px 5px;
+      font-weight: bold;
+    }
+    a.button-link:hover {
+      background-color: #8b0000;
     }
   </style>
 </head>
 <body>
-  <header style="border-top: 4px solid #720000; padding-top: 10px;">
-    <h1 style="text-align:center;">Earl Naswell Christmas Society</h1>
-    <div style="text-align: center;">
-      <img src="logo-new.png" alt="Logo" style="max-width: 150px; height: auto; display: block; margin: 10px auto;">
-      <h2 style="font-weight: normal;">A Place for Everyone at the Table</h2>
-    </div>
+  <header>
+    <h1>Earl Naswell Christmas Society</h1>
+    <img src="assets/logo.png" alt="Earl Naswell Christmas Society Logo" class="logo" />
+    <h2>A Place for Everyone at the Table</h2>
   </header>
 
-  <main>
-    <section class="bio-section">
-      <h2>About Earl Naswell</h2>
-      <h3>January 21, 1931 – October 6, 2020</h3>
-      <p>
-        Earl Naswell was born in Minnedosa, Manitoba, to John and Mary Naswell. A devoted father of seven children, grandfather of fourteen, and great-grandfather of thirteen, Earl was a kind and hardworking man who made an extraordinary impact on the Comox Valley community.
-      </p>
-      <p>
-        In 1982, Earl began what would become one of Vancouver Island’s most cherished traditions: the Earl Naswell Community Christmas Dinner. What started as a simple act of kindness for a few friends grew into a community-wide event that now serves over 500 people annually.
-      </p>
+  <img src="assets/earl-naswell.jpg" alt="Earl Naswell with Santa" class="main-image" />
 
-      <!-- Image -->
-      <img src="earl-naswell-photo.jpg" alt="Earl Naswell with Santa" class="bio-photo">
+  <button class="listen-button" onclick="readArticle()">
+    🔊 Listen to Article
+  </button>
 
-      <!-- Listen to Article Button -->
-      <button class="listen-button" onclick="speakArticle()">🔊 Listen to Article</button>
-    </section>
-  </main>
+  <section id="bio">
+    <p>
+      Earl Naswell was born in Minnedosa, Manitoba to John and Mary Naswell. A devoted father of seven children, grandfather of fourteen, and great-grandfather of thirteen, Earl was a kind and hardworking man who made an extraordinary impact on the Comox Valley community. In 1982, Earl began what would become one of Vancouver Island’s most cherished traditions: the Earl Naswell Community Christmas Dinner. What started as a simple act of kindness for a few friends grew into a community-wide event that now serves over 500 people annually.
+    </p>
+  </section>
+
+  <section>
+    <a class="button-link" href="https://www.canadahelps.org/en/explore/charities/region/BC/city/comox/" target="_blank">Donate on CanadaHelps</a>
+    <a class="button-link" href="mailto:earlnaswellchristmassociety@gmail.com">Volunteer With Us</a>
+    <a class="button-link" href="gallery.html">View Photo Gallery</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Earl Naswell Christmas Society | Registered Non-Profit Canadian Charity</p>
+  </footer>
 
   <script>
-    function speakArticle() {
-      const bioText = `
-        About Earl Naswell.
-        January 21, 1931 to October 6, 2020.
-        Earl Naswell was born in Minnedosa, Manitoba, to John and Mary Naswell.
-        A devoted father of seven children, grandfather of fourteen, and great-grandfather of thirteen,
-        Earl was a kind and hardworking man who made an extraordinary impact on the Comox Valley community.
-
-        In 1982, Earl began what would become one of Vancouver Island’s most cherished traditions:
-        the Earl Naswell Community Christmas Dinner.
-        What started as a simple act of kindness for a few friends grew into a community-wide event that now serves over 500 people annually.
-      `;
-      const utterance = new SpeechSynthesisUtterance(bioText);
-      speechSynthesis.speak(utterance);
+    function readArticle() {
+      const article = document.querySelector('#bio').innerText;
+      const utterance = new SpeechSynthesisUtterance(article);
+      window.speechSynthesis.cancel(); // Stop any current speech
+      window.speechSynthesis.speak(utterance);
     }
   </script>
 </body>
