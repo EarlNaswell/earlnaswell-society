@@ -16,13 +16,6 @@
       background-color: #8B0000;
       color: white;
       padding: 30px 20px 10px 20px;
-      
- footer {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #222;
-            color: white;
-            font-size: 0.9em;   
     }
     .logo {
       width: 150px;
@@ -90,6 +83,13 @@
       transform: none;
       font-size: 2em;
     }
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      font-size: 0.9em;
+    }
   </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3L6GT8WWN6"></script>
@@ -107,7 +107,6 @@
     <div class="subtitle">Photos from past Christmas Dinners</div>
   </div>
   <div class="gallery-container">
-    <!-- Images from image1.jpg to image10.jpg -->
     <img src="assets/image1.jpg" alt="Gallery Image 1" onclick="openLightbox(0)" />
     <img src="assets/image2.jpg" alt="Gallery Image 2" onclick="openLightbox(1)" />
     <img src="assets/image3.jpg" alt="Gallery Image 3" onclick="openLightbox(2)" />
@@ -125,6 +124,9 @@
     <img id="lightbox-img" src="" alt="Large View" />
     <span class="arrow right" onclick="nextImage()">›</span>
   </div>
+  <footer>
+    © 2025 Earl Naswell Christmas Society | Non-Registered Non-Profit Canadian Charity
+  </footer>
   <script>
     const images = [...document.querySelectorAll('.gallery-container img')];
     const lightbox = document.getElementById('lightbox');
@@ -151,14 +153,11 @@
       lightboxImg.src = images[currentIndex].src;
     }
 
-    // Close on Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
       if (e.key === 'ArrowRight') nextImage();
       if (e.key === 'ArrowLeft') prevImage();
     });
   </script>
-        © 2025 Earl Naswell Christmas Society | Non-Registered Non-Profit Canadian Charity
-    </footer>
 </body>
 </html>
